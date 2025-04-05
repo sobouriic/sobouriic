@@ -1,4 +1,4 @@
-# Hello, I'm Soukaina Bourich 👩‍💻
+# Hello, I'm Soukaina  👩‍💻
 
 I’m a passionate **Software Developer** and a proud member of **1337 Coding School**. I specialize in **Full Stack Development**, with a strong focus on **backend technologies**. I’m always eager to learn and explore new technologies, especially in the areas of **IoT**, **Mobile Applications**, and **Cloud Computing**.
 
