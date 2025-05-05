@@ -14,7 +14,7 @@ I love to build efficient, scalable, and innovative applications. I enjoy the pr
 - **Languages**: 
   - C, C++, Python, JavaScript, HTML, CSS
 - **Frameworks**:
-  - Django, React, React Native
+  - Django, React
 - **Databases**: 
   - MySQL, PostgreSQL
 - **Tools**:
