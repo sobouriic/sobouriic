@@ -64,16 +64,16 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Criteria Card Styles - CURRENT LAYOUT (with issues) */
+/* Criteria Card Styles - IMPROVED LAYOUT */
 .criteria-card {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 24px;
+    padding: 20px;
     transition: all 0.3s ease;
     position: relative;
-    /* Current issue: Too much vertical space */
-    min-height: 220px;
+    /* Reduced vertical space for better layout */
+    min-height: 160px;
 }
 
 .criteria-card:hover {
@@ -83,9 +83,9 @@ h1 {
 
 .criteria-header {
     position: relative;
-    margin-bottom: 20px;
-    /* Current layout has stars at bottom right */
-    min-height: 80px;
+    margin-bottom: 16px;
+    /* Reduced height for more compact layout */
+    min-height: 50px;
 }
 
 .criteria-title {
@@ -94,6 +94,8 @@ h1 {
     color: #2c3e50;
     margin-bottom: 8px;
     line-height: 1.4;
+    /* Reserve space for stars on the right */
+    padding-right: 120px;
 }
 
 .criteria-description {
@@ -102,10 +104,10 @@ h1 {
     line-height: 1.5;
 }
 
-/* Current problematic layout: Stars at bottom right */
+/* FIXED: Stars moved to top right for better layout */
 .rating-stars {
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     display: flex;
     gap: 4px;
@@ -139,7 +141,7 @@ h1 {
 
 /* Criteria Content */
 .criteria-content {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .criteria-points {
@@ -165,16 +167,35 @@ h1 {
     margin-right: 8px;
 }
 
-/* Current mode-specific styles (with issues) */
+/* Mode-specific styles - IMPROVED */
 .assess-mode .criteria-card {
-    /* Too much vertical space in assess mode */
-    min-height: 220px;
-    padding: 24px;
+    /* Optimized for assess mode: compact and efficient */
+    min-height: 140px;
+    padding: 16px;
+}
+
+.assess-mode .criteria-header {
+    margin-bottom: 12px;
+    min-height: 40px;
+}
+
+.assess-mode .criteria-content {
+    margin-top: 8px;
 }
 
 .critique-mode .criteria-card {
+    /* Preserve existing layout for critique mode */
     min-height: 180px;
     padding: 20px;
+}
+
+.critique-mode .criteria-header {
+    margin-bottom: 16px;
+    min-height: 50px;
+}
+
+.critique-mode .criteria-content {
+    margin-top: 12px;
 }
 
 /* Status indicator */
