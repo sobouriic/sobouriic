@@ -1,6 +1,6 @@
 # Hello, I'm Soukaina  👩‍💻
 
-I’m a passionate **Software Developer** and a proud member of **1337 Coding School**. I specialize in **Full Stack Development**, with a strong focus on **backend technologies**. I’m always eager to learn and explore new technologies, especially in the areas of **IoT**, **Mobile Applications**, and **Cloud Computing**.
+I’m a passionate **Software Developer** and a proud member of **1337 Coding School**. I specialize in **Full Stack Development**, with a strong focus on **backend technologies**. 
 
 ## 💻 About Me
 I love to build efficient, scalable, and innovative applications. I enjoy the process of **problem-solving** and thrive in fast-paced environments. I’m always looking for new challenges and opportunities to enhance my skills. My goal is to continually grow as a developer and contribute to impactful projects.
