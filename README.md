@@ -12,7 +12,7 @@ I love to build efficient, scalable, and innovative applications. I enjoy the pr
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
 
 - **Languages**: 
-  - C, C++, Python, JavaScript, HTML, CSS
+  - C, C++, java,Python, JavaScript, HTML, CSS
 - **Frameworks**:
   - Django, React
 - **Databases**: 
