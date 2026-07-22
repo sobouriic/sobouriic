@@ -1,4 +1,4 @@
-# Hi, I’m Soukaina Bourich 👋
+# Hi, I’m Soukaina  👋
 
 I’m a **Software Developer and Research Engineer** with a strong interest in backend development, artificial intelligence, data science, and interactive applications.
 
