@@ -1,35 +1,64 @@
-# Hello, I'm Soukaina  👩‍💻
+# Hi, I’m Soukaina Bourich 👋
 
-I’m a passionate **Software Developer** and a proud member of **1337 Coding School**. I specialize in **Full Stack Development**, with a strong focus on **backend technologies**. 
+I’m a **Software Developer and Research Engineer** with a strong interest in backend development, artificial intelligence, data science, and interactive applications.
 
-## 💻 About Me
-I love to build efficient, scalable, and innovative applications. I enjoy the process of **problem-solving** and thrive in fast-paced environments. I’m always looking for new challenges and opportunities to enhance my skills. My goal is to continually grow as a developer and contribute to impactful projects.
+I studied at **1337 Coding School**, part of the 42 Network, where I developed a solid foundation in computer science, algorithms, system programming, and problem-solving.
 
-## 🚀 Technologies & Tools
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+I enjoy transforming complex ideas into practical, reliable, and user-friendly tools.
 
-- **Languages**: 
-  - C, C++, java,Python, JavaScript, HTML, CSS
-- **Frameworks**:
-  - Django, React
-- **Databases**: 
-  - MySQL, PostgreSQL
-- **Tools**:
-  - Docker, Git, CI/CD, Nginx
-- **Cloud**:
-  - AWS, Google Cloud, Azure
+## About Me
 
-## 🌐 Connect with Me
+* 🔭 Currently working on AI-powered research tools
+* 🧠 Interested in artificial intelligence, machine learning, NLP, and data science
+* ⚙️ Experienced in backend development, APIs, databases, and deployment
+* 🌱 Continuously learning and exploring new technologies
+* 🤝 Open to collaborations and interesting software projects
 
-- **Email**: [bourichsoukaina3@gmail.com](mailto:bourichsoukaina3@gmail.com)
-- **LinkedIn**: [Soukaina Bourich](https://www.linkedin.com/in/soukaina-b-5b61b71a2/)
+## Technologies
 
+### Languages
 
+`C` `C++` `Python` `JavaScript` `TypeScript` `SQL` `HTML` `CSS`
+
+### Backend
+
+`FastAPI` `Django` `Flask` `REST APIs` `WebSockets` `Server-Sent Events`
+
+### Frontend
+
+`React` `Vite` `D3.js` `Tailwind CSS`
+
+### Artificial Intelligence and Data
+
+`Machine Learning` `NLP` `LLMs` `Scikit-learn` `PyTorch` `TensorFlow` `Pandas` `NumPy`
+
+### Databases
+
+`PostgreSQL` `MySQL` `Redis`
+
+### DevOps and Tools
+
+`Docker` `Docker Compose` `Git` `GitHub` `GitLab` `Linux` `Nginx` `CI/CD`
+
+### Cloud and Infrastructure
+
+`AWS` `Azure` `Google Cloud` `DigitalOcean`
+
+## What I Enjoy Building
+
+* AI-powered applications
+* Backend systems and APIs
+* Data analysis and machine learning tools
+* Interactive data visualizations
+* Real-time web applications
+* Developer and research tools
+
+## Contact
+
+* **Email:** [bourichsoukaina3@gmail.com](mailto:bourichsoukaina3@gmail.com)
+* **LinkedIn:** [Soukaina Bourich](www.linkedin.com/in/soukaina-b-5b61b71a2)
+* **GitHub:** [@sobouriic](https://github.com/sobouriic)
 
 ---
 
-### 👨‍💻 Let's Build Something Amazing Together!
-If you're looking for a passionate and driven software developer, feel free to reach out. I’m open to collaborations, freelance opportunities, and exciting new projects.
+I’m always interested in learning, collaborating, and contributing to meaningful projects.
