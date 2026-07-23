@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Tests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .test-pass {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .test-fail {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assessment & Critique Component Tests</h1>
+    
+    <div class="test-section">
+        <h2>Test Results</h2>
+        <div id="test-results"></div>
+    </div>
+
+    <script>
+        // Simple test framework
+        class TestRunner {
+            constructor() {
+                this.tests = [];
+                this.results = [];
+            }
+            
+            test(description, testFn) {
+                this.tests.push({ description, testFn });
+            }
+            
+            async run() {
+                const resultsContainer = document.getElementById('test-results');
+                
+                for (const test of this.tests) {
+                    try {
+                        const result = await test.testFn();
+                        this.results.push({
+                            description: test.description,
+                            passed: result,
+                            error: null
+                        });
+                    } catch (error) {
+                        this.results.push({
+                            description: test.description,
+                            passed: false,
+                            error: error.message
+                        });
+                    }
+                }
+                
+                this.displayResults(resultsContainer);
+            }
+            
+            displayResults(container) {
+                container.innerHTML = '';
+                
+                this.results.forEach(result => {
+                    const div = document.createElement('div');
+                    div.className = `test-result ${result.passed ? 'test-pass' : 'test-fail'}`;
+                    div.innerHTML = `
+                        <strong>${result.passed ? '✓' : '✗'} ${result.description}</strong>
+                        ${result.error ? `<br>Error: ${result.error}` : ''}
+                    `;
+                    container.appendChild(div);
+                });
+                
+                const summary = document.createElement('div');
+                const passed = this.results.filter(r => r.passed).length;
+                const total = this.results.length;
+                summary.innerHTML = `<h3>Summary: ${passed}/${total} tests passed</h3>`;
+                container.insertBefore(summary, container.firstChild);
+            }
+        }
+
+        // Test the main application in an iframe
+        const testRunner = new TestRunner();
+
+        testRunner.test('Main application loads correctly', () => {
+            return new Promise((resolve) => {
+                const iframe = document.createElement('iframe');
+                iframe.src = './index.html';
+                iframe.style.display = 'none';
+                iframe.onload = () => {
+                    const loaded = iframe.contentDocument.title === 'Assess/Critique Component';
+                    document.body.removeChild(iframe);
+                    resolve(loaded);
+                };
+                document.body.appendChild(iframe);
+            });
+        });
+
+        testRunner.test('CSS file exists and has correct rating star positioning', () => {
+            return fetch('./styles.css')
+                .then(response => response.text())
+                .then(css => {
+                    // Check for the fixed rating stars positioning (top: 0 instead of bottom: 0)
+                    const hasTopPositioning = css.includes('top: 0');
+                    const hasFixedComment = css.includes('FIXED: Stars moved to top right');
+                    return hasTopPositioning && hasFixedComment;
+                });
+        });
+
+        testRunner.test('JavaScript file contains CritiqueByCriteria component', () => {
+            return fetch('./script.js')
+                .then(response => response.text())
+                .then(js => {
+                    return js.includes('class CritiqueByCriteria') && 
+                           js.includes('createCriteriaCard') &&
+                           js.includes('updateRating');
+                });
+        });
+
+        testRunner.test('Assess mode has reduced spacing configurations', () => {
+            return fetch('./styles.css')
+                .then(response => response.text())
+                .then(css => {
+                    // Check for assess mode optimizations
+                    const hasAssessMode = css.includes('.assess-mode .criteria-card');
+                    const hasReducedHeight = css.includes('min-height: 140px');
+                    const hasReducedPadding = css.includes('padding: 16px');
+                    return hasAssessMode && hasReducedHeight && hasReducedPadding;
+                });
+        });
+
+        testRunner.test('Critique mode preserves original spacing', () => {
+            return fetch('./styles.css')
+                .then(response => response.text())
+                .then(css => {
+                    // Check for critique mode preservation
+                    const hasCritiqueMode = css.includes('.critique-mode .criteria-card');
+                    const hasPreservedHeight = css.includes('min-height: 180px');
+                    return hasCritiqueMode && hasPreservedHeight;
+                });
+        });
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            testRunner.run();
+        });
+    </script>
+</body>
+</html>
